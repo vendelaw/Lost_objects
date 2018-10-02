@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  background-color: pink;
+  color: blue;
+}
+
+a {
+    margin-bottom: 30px;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.inputsection {
+  margin: 50px 0 px 80 px 0 px;
+  width: 400;
+}
+
+.inputs {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-top: 10px;
+}
+
+.submitoption {
+  margin-top: 10px;
+}
