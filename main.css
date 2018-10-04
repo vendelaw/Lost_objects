@@ -17,12 +17,11 @@ h1 {
   font-size: 30px;
   font-family: sans-serif;
   letter-spacing: 1px;
-  width: 500px;
   line-height: 40px;
   margin-bottom: 20px;
 }
 
-.inputsection {
+.inputSection {
   margin: 50px 0 px 80 px 0 px;
   width: 400;
 }
@@ -41,6 +40,13 @@ input {
   margin-top: 10px;
 }
 
-.submitoption {
+.addOption {
   margin-top: 10px;
+}
+
+.resultSection {
+  height: 200px;
+  display: flex;
+  justify-content: : center;
+  font-size: 50px;
 }

@@ -2,36 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="big5">
-    <title>Lost Objects</title>
+    <title>Help me choose</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1 class="background-color">I've lost my soul and I don't know how to find it...</h1>
+    <h1 class="background-color">Help me choose between...</h1>
     <a href="https://en.wikipedia.org/wiki/Nostalgia">
-    <img src="https://usercontent2.hubstatic.com/13571303.jpg" alt="crying" with="300" height="400">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8QKUAF4UkRjYizoQ073RzlktOqtdlEKElw6q_spoW3g1YBVV7" alt="crying" with="300" height="400">
     </a>
-    <div class="inputsection">
+    <div class="inputSection">
       <div class="inputs">
-        <input placeholder="Where should I search?">
+        <input placeholder="Something?"></input>
       </div>
-      <button class="submitoption">Submit</button>
+      <button class="addOption">Submit</button>
     </div>
   <div class="resultSection"></div>
-    <button class="button">Search!</button>
+    <button class="submit">Go!</button>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(function() {
         $('.resultSection').hide()
 
-        var search_option = function() {
+        var add_option = function() {
           $('.inputs').append('<input></input>')
         }
-
-        $('.submitoption').click(search_option)
+        $('.addOption').click(add_option)
 
         $('.background-color').click(function() {
         $('body').css("background-color", "lightgrey");
       });
+
+      var options = []
+      var submit = function() {
+        $('.inputSection').hide()
+        $('.resultSection').css('display', 'flex')
+        $('input').each(function() {
+          options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.resultSection').text(winner)
+      }
+      $('.submit').click(submit)
       })
     </script>
   </body>
